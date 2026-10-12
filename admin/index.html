@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07162b" />
+    <title>Настройки сайта</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header class="admin-header">
+      <a class="admin-brand" href="../index.html"
+        ><span class="brand-icon">✳</span>ПАНЕЛЬ САЙТА</a
+      ><a
+        class="preview-link"
+        href="../index.html"
+        target="_blank"
+        rel="noopener"
+        >Открыть сайт <span>↗</span></a
+      >
+    </header>
+    <main class="admin-layout">
+      <section class="intro">
+        <span class="eyebrow">УПРАВЛЕНИЕ ДАННЫМИ</span>
+        <h1>Контакты<br /><em>и информация.</em></h1>
+        <p>
+          Обновите сведения о компании. После сохранения скачайте файл настроек
+          и загрузите его на сайт через панель хостинга.
+        </p>
+        <div class="step-list">
+          <div><b>01</b><span>Заполните поля</span></div>
+          <div><b>02</b><span>Скачайте настройки</span></div>
+          <div><b>03</b><span>Замените файл на хостинге</span></div>
+        </div>
+      </section>
+      <form class="settings-card" id="settingsForm">
+        <div class="form-heading">
+          <span>ДАННЫЕ КОМПАНИИ</span><span class="save-dot"></span>
+        </div>
+        <label
+          >Название компании<input
+            name="companyName"
+            type="text"
+            placeholder="Например, Ателье Нур"
+            required
+        /></label>
+        <label
+          >Короткое описание<textarea
+            name="companyDescription"
+            rows="3"
+            placeholder="Чем занимается компания — коротко и понятно"
+          ></textarea
+          ><small
+            >Появится на главной странице и в описании для поиска.</small
+          ></label
+        >
+        <div class="form-divider"><span>КАНАЛЫ СВЯЗИ</span></div>
+        <div class="field-grid">
+          <label
+            >Телефон на сайте<input
+              name="phoneDisplay"
+              type="text"
+              placeholder="+996 555 123 456" /></label
+          ><label
+            >Телефон для звонка<input
+              name="phoneNumber"
+              type="tel"
+              placeholder="+996555123456"
+            /><small>Международный формат.</small></label
+          >
+        </div>
+        <label
+          >WhatsApp<input
+            name="whatsappNumber"
+            type="tel"
+            placeholder="996555123456"
+          /><small
+            >Только цифры с кодом страны, без плюса и пробелов.</small
+          ></label
+        >
+        <label
+          >Instagram<input
+            name="instagramUrl"
+            type="url"
+            placeholder="https://instagram.com/ваш_аккаунт"
+        /></label>
+        <label
+          >TikTok<input
+            name="tiktokUrl"
+            type="url"
+            placeholder="https://tiktok.com/@ваш_аккаунт"
+        /></label>
+        <label
+          >Telegram<input
+            name="telegramUrl"
+            type="url"
+            placeholder="https://t.me/ваш_аккаунт"
+        /></label>
+        <label
+          >Электронная почта<input
+            name="email"
+            type="email"
+            placeholder="hello@example.com"
+        /></label>
+        <div class="field-grid">
+          <label
+            >Дополнительный канал — название<input
+              name="customLinkLabel"
+              type="text"
+              placeholder="Например, каталог или карта" /></label
+          ><label
+            >Ссылка дополнительного канала<input
+              name="customLinkUrl"
+              type="url"
+              placeholder="https://example.com"
+          /></label>
+        </div>
+        <div class="form-actions">
+          <button class="download-button" type="submit">
+            Скачать файл настроек <span>↓</span></button
+          ><button class="reset-button" type="reset">Сбросить</button>
+        </div>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite">
+          Изменения в форме пока не опубликованы.
+        </p>
+        <p class="privacy-note">
+          Контактные данные видны всем посетителям сайта. Не указывайте здесь
+          пароли или закрытую информацию.
+        </p>
+      </form>
+    </main>
+    <script src="../js/site-config.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
